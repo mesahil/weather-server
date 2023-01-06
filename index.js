@@ -1,9 +1,10 @@
 const express = require("express");
 const connectDB = require("./DB/connect");
+const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 5000;
 const city_route = require("./routes/city");
-
+app.use(cors());
 // app.get("/", (req, res) => {
 //   res.status(200).json({ test: "ok" });
 // });
